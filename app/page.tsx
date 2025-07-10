@@ -5,6 +5,7 @@ import { ChefHat, Utensils, Fish, Pizza, Salad, Coffee } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function Component() {
   const [activeCategory, setActiveCategory] = useState("salads")
@@ -785,6 +786,20 @@ export default function Component() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-orange-50">
+      {/* Navigation Header */}
+      <div className="bg-white border-b shadow-sm">
+        <div className="max-w-6xl mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-gray-800">My V0 Project</h1>
+            <Button asChild className="bg-gradient-to-r from-orange-500 to-green-600 hover:from-orange-600 hover:to-green-700 text-white">
+              <Link href="/dns-troubleshooting">
+                🚨 DNS Troubleshooting Guide
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+
       {/* Banner */}
       <div className="relative w-full h-64 md:h-80 overflow-hidden">
         <img src="https://i.imgur.com/IyeRPih.jpg" alt="N2 Diet Banner" className="w-full h-full object-cover" />
